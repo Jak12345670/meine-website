@@ -10,7 +10,10 @@
   
   <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
+  
+
 <header>
   <div class="title-with-ginkgo">
     <img src="ginkgo.png" alt="Ginkgo-Blatt links" class="ginkgo">
@@ -19,45 +22,58 @@
   </div>
 
   <nav>
-    <ul>
-      <li>
-  <a href="#Kleidung">Kleidung</a>
-  <ul class="submenu">
-    <li><a href="pullover.html">Pullover</a></li>
-    <li><a href="tshirts.html">T-Shirts</a></li>
-    <li><a href="seifen.html">Seifen</a></li>
-  </ul>
-</li>
+    <ul class="main-nav">
+      <li class="has-submenu">
+        <a href="#kleidung">Kleidung</a>
+        <ul class="submenu">
+          <li><a href="pullover.html">Pullover</a></li>
+          <li><a href="tshirts.html">T-Shirts</a></li>
+        </ul>
+      </li>
 
-      <li><a href="#Geschichte">Geschichte</a></li>
-      <li><a href="#Kontakt">Kontakt</a></li>
+      <li class="has-submenu">
+        <a href="#seifen">Seifen</a>
+        <ul class="submenu">
+          <li><a href="seifen.html">Seifen</a></li>
+        </ul>
+      </li>
+
+      <li><a href="#chronik">Chronik</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
     </ul>
   </nav>
 </header>
 
 
+
   <main>
-    <section id="Kleidung">
+    <section id="kleidung">
       <h2>Kleidung</h2>
       <p>Hier kannst du nützliche Informationen oder Tipps einfügen.</p>
     </section>
 
-    <section id="Geschichte">
-      <h2>Geschichte</h2>
-      <button id="clickMe">Klicke mich!</button>
-      <p id="message"></p>
+    <section id="chronik">
+      <h2>Chronik</h2>
+
+      <div class="click-section">
+      <button class="click-btn">Unsere Geschichte</button>
+      <p class="click-text">Hallo wir sind Ben und Jakob.</p>
+    </div>
       
-      
-     
+    <div class="click-section">
+      <button class="click-btn">Nachhaltigkeit</button>
+      <p class="click-text">Nachhaltigkeit ist uns wichtig.</p>
+    </div>
     </section>
 
-    <section id="Kontakt">
+    <section id="kontakt">
       <h2>Kontakt</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="☎️ +43 677 62 68 57 27" required>
-        <input type="email" placeholder="✉️kontakt@kf.at" required>
-        <input type="text" placeholder="📍 4400 Steyr" required>
-      </form>
+      <div class="contact-info">
+  <p>☎️ +43 677 62 68 57 27</p>
+  <p>✉️ kontakt@kf.at</p>
+  <p>📍 4400 Steyr</p>
+</div>
+
     </section>
   </main>
 
@@ -65,6 +81,25 @@
     <p>&copy; 2025 Meine Website</p>
   </footer>
 
-  <script src="script.js"></script>
+
+  <script>
+  // Alle Buttons mit Klasse .click-btn auswählen
+  const buttons = document.querySelectorAll(".click-btn");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Text direkt unter dem Button auswählen
+      const text = button.nextElementSibling;
+      
+      // Toggle: Wenn sichtbar, ausblenden; wenn unsichtbar, anzeigen
+      if (text.style.display === "block") {
+        text.style.display = "none";
+      } else {
+        text.style.display = "block";
+      }
+    });
+  });
+</script>
+
 </body>
 </html>
