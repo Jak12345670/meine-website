@@ -11,39 +11,52 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
+<header>
+  <div class="title-with-ginkgo">
+    <img src="ginkgo.png" alt="Ginkgo-Blatt links" class="ginkgo">
     <h1 id="mainTitle">KNÖBL FÜRUTER</h1>
-    <nav>
-      <ul>
-        <li><a href="#info">Info</a></li>
-        <li><a href="#tools">Tools</a></li>
-        <li><a href="#kontakt">Kontakt</a></li>
-      </ul>
-    </nav>
-  </header>
+    <img src="ginkgo.png" alt="Ginkgo-Blatt rechts" class="ginkgo">
+  </div>
+
+  <nav>
+    <ul>
+      <li>
+  <a href="#Kleidung">Kleidung</a>
+  <ul class="submenu">
+    <li><a href="pullover.html">Pullover</a></li>
+    <li><a href="tshirts.html">T-Shirts</a></li>
+    <li><a href="seifen.html">Seifen</a></li>
+  </ul>
+</li>
+
+      <li><a href="#Geschichte">Geschichte</a></li>
+      <li><a href="#Kontakt">Kontakt</a></li>
+    </ul>
+  </nav>
+</header>
+
 
   <main>
-    <section id="info">
-      <h2>Info-Bereich</h2>
+    <section id="Kleidung">
+      <h2>Kleidung</h2>
       <p>Hier kannst du nützliche Informationen oder Tipps einfügen.</p>
     </section>
 
-    <section id="tools">
-      <h2>Tools</h2>
+    <section id="Geschichte">
+      <h2>Geschichte</h2>
       <button id="clickMe">Klicke mich!</button>
       <p id="message"></p>
       
-      <!-- Ginkgo-Blatt -->
-      <img src="ginkgo.png" alt="Ginkgo-Blatt" id="ginkgoImage">
+      
+     
     </section>
 
-    <section id="kontakt">
+    <section id="Kontakt">
       <h2>Kontakt</h2>
       <form id="contactForm">
-        <input type="text" placeholder="Name" required>
-        <input type="email" placeholder="E-Mail" required>
-        <textarea placeholder="Nachricht"></textarea>
-        <button type="submit">Senden</button>
+        <input type="text" placeholder="☎️ +43 677 62 68 57 27" required>
+        <input type="email" placeholder="✉️kontakt@kf.at" required>
+        <input type="text" placeholder="📍 4400 Steyr" required>
       </form>
     </section>
   </main>

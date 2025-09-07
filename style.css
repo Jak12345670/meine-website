@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -22,18 +26,19 @@ h1#mainTitle {
   margin: 0.5rem 0;
 }
 
-nav ul li a {
-  color: #556B2F; /* dunkelgrün, besser sichtbar */
-  text-decoration: none;
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
 }
-
 
 nav ul li {
   margin: 0 1rem;
 }
 
 nav ul li a {
-  color: white;
+  color: black;
   text-decoration: none;
 }
 
@@ -64,11 +69,82 @@ footer {
   margin: 1.5rem auto 0 auto;
   width: 100px; /* Größe anpassen */
 }
-section h2 {
-  color: #333333; /* dunkles Grau */
+/* Hover-Effekt für Navigation */
+nav ul li a:hover {
+  background-color: #556B2F; /* dunkelgrün-khaki-braunlich */
+  color: white;               /* Textfarbe während Hover */
+  padding: 0.25rem 0.5rem;    /* kleiner Abstand um den Text */
+  border-radius: 4px;         /* abgerundete Ecken */
+  transition: 0.3s;           /* sanfte Animation */
+}
+/* Container für Titel + Ginkgo */
+.title-with-ginkgo {
+  display: flex;
+  align-items: center;     /* Bilder & Text vertikal ausrichten */
+  justify-content: center; /* alles in die Mitte */
+  gap: 1rem;               /* Abstand zwischen Bild und Text */
 }
 
-section p {
-  color: #333333; /* dunkles Grau */
+/* Ginkgo-Bilder links/rechts */
+.title-with-ginkgo .ginkgo {
+  width: 60px;   /* Größe des Bildes */
+  height: auto;  /* Höhe proportional */
+}
+#contactForm {
+  display: flex;
+  flex-direction: column;  /* Elemente untereinander */
+  gap: 0.5rem;             /* Abstand zwischen den Feldern */
+  max-width: 400px;        /* Formular nicht zu breit */
 }
 
+#contactForm input,
+#contactForm textarea,
+#contactForm button {
+  padding: 0.5rem;
+  font-size: 1rem;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav ul li {
+  position: relative;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 0.5rem;
+}
+
+/* Untermenü verstecken */
+.submenu {
+  display: none;
+  position: absolute;
+  top: 100%;   /* unter dem Hauptpunkt */
+  left: 0;
+  background: #f5f5f5;
+  padding: 0.5rem;
+  list-style: none;
+}
+
+/* Untermenü sichtbar machen, wenn man drüberfährt */
+nav ul li:hover .submenu {
+  display: block;
+}
+
+.submenu li {
+  margin: 0.5rem 0;
+}
+
+.submenu li a {
+  display: block;
+  padding: 0.3rem 0.5rem;
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+.submenu li a:hover {
+  background: #ccc;
+}
