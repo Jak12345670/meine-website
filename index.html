@@ -2,13 +2,55 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <title>Meine erste Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Nützliche Website</title>
+  
+  <!-- Google Font: Playfair Display (künstlerisch, seriös) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <h1>Hallo Welt 🌍</h1>
-  <p>Willkommen auf meiner ersten Website!</p>
-  <button onclick="zeigeNachricht()">Klick mich</button>
+  <header>
+    <h1 id="mainTitle">KNÖBL FÜRUTER</h1>
+    <nav>
+      <ul>
+        <li><a href="#info">Info</a></li>
+        <li><a href="#tools">Tools</a></li>
+        <li><a href="#kontakt">Kontakt</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section id="info">
+      <h2>Info-Bereich</h2>
+      <p>Hier kannst du nützliche Informationen oder Tipps einfügen.</p>
+    </section>
+
+    <section id="tools">
+      <h2>Tools</h2>
+      <button id="clickMe">Klicke mich!</button>
+      <p id="message"></p>
+      
+      <!-- Ginkgo-Blatt -->
+      <img src="ginkgo.png" alt="Ginkgo-Blatt" id="ginkgoImage">
+    </section>
+
+    <section id="kontakt">
+      <h2>Kontakt</h2>
+      <form id="contactForm">
+        <input type="text" placeholder="Name" required>
+        <input type="email" placeholder="E-Mail" required>
+        <textarea placeholder="Nachricht"></textarea>
+        <button type="submit">Senden</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Meine Website</p>
+  </footer>
 
   <script src="script.js"></script>
 </body>

@@ -1,24 +1,74 @@
 body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  color: #333;
-  text-align: center;
-  margin: 50px;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  background-color: #f5f5f5;
 }
 
-h1 {
-  color: #0077cc;
+header {
+  background-color: #f5f5f5; /* hellgrau, passt zum Seitenhintergrund */
+  color: #556B2F;
+  padding: 1rem;
+  text-align: center;
+}
+
+
+
+h1#mainTitle {
+  font-family: 'Playfair Display', serif; /* verspielt & seriös */
+  font-size: 3rem;
+  color: #556B2F; /* dunkelgrün-khaki-bräunlich */
+  margin: 0.5rem 0;
+}
+
+nav ul li a {
+  color: #556B2F; /* dunkelgrün, besser sichtbar */
+  text-decoration: none;
+}
+
+
+nav ul li {
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+section {
+  padding: 2rem;
+  margin: 1rem auto;
+  max-width: 800px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
 
 button {
-  padding: 10px 20px;
-  background: #0077cc;
-  color: white;
-  border: none;
-  border-radius: 5px;
+  padding: 0.5rem 1rem;
   cursor: pointer;
+  margin-top: 1rem;
 }
 
-button:hover {
-  background: #005999;
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: #ddd;
 }
+
+/* Ginkgo-Blatt */
+#ginkgoImage {
+  display: block;
+  margin: 1.5rem auto 0 auto;
+  width: 100px; /* Größe anpassen */
+}
+section h2 {
+  color: #333333; /* dunkles Grau */
+}
+
+section p {
+  color: #333333; /* dunkles Grau */
+}
+
