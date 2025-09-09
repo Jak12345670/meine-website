@@ -31,18 +31,26 @@ h1#mainTitle {
   margin: 0.5rem 0;
 }
 
+#mainTitle a {
+  color: inherit;         /* übernimmt die gleiche Farbe wie das H1 */
+  text-decoration: none;  /* kein Unterstrich */
+}
+
+#mainTitle a:hover {
+  color: #333; /* beim Hover etwas dunkler */
+}
+
 /* ---------------------------------------- */
 /* --- Navigation --- */
 /* ---------------------------------------- */
 nav {
   background-color: white;
   padding: 0;
-  margin: 1rem auto;              /* Abstand nach oben/unten */                   /* wie bei den Boxen */
-  max-width: 1200px;              /* gleiche Breite wie Boxen */
-  border-radius: 8px;             /* abgerundete Ecken */
-  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* dezenter Schatten */
+  margin: 1rem auto;
+  max-width: 1200px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
 }
-
 
 nav ul {
   list-style: none;
@@ -214,6 +222,7 @@ section {
 
 /* ---------------------------------------- */
 /* --- Footer --- */
+/* ---------------------------------------- */
 footer {
   text-align: center;
   padding: 1rem;
@@ -222,6 +231,7 @@ footer {
 
 /* ---------------------------------------- */
 /* --- Kleidung-Seite --- */
+/* ---------------------------------------- */
 #kleidung h1,
 #kleidung h2 {
   color: black;
@@ -258,28 +268,63 @@ footer {
   border-radius: 6px;
   text-decoration: none;
   color: #333;
+  transition: background 0.3s ease;
 }
 
 .back-link:hover {
   background-color: #dcdcdc;
 }
 
-#mainTitle a {
-  color: inherit;         /* übernimmt die gleiche Farbe wie das H1 */
-  text-decoration: none;  /* kein Unterstrich */
-}
-
-#mainTitle a:hover {
-  color: #333; /* beim Darüberfahren leicht dunkler, kannst du anpassen */
-}
-
-
-/* Hintergrundbild nur für die Startseiten-Box */
+/* ---------------------------------------- */
+/* --- Hintergrundbild nur Startseite --- */
+/* ---------------------------------------- */
 .home {
-  background-image: url('images/benjakob2.jpeg'); /* Pfad zum Bild anpassen */
-  background-size: cover;       /* Bild wird komplett angezeigt */
-  background-position: center;  /* Bild zentriert */
-  border-radius: 12px;          /* gleiche abgerundete Ecken wie andere Boxen */
-  padding: 2rem;                /* optional, Innenabstand */
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional, Schatten */
+  background-color: transparent;
+  background-image: url('images/benjakob2.jpeg');
+  background-size: cover;
+  background-position: center;
+  border-radius: 12px;
+  padding: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 1rem auto;
+  position: relative;
+  color: white;
+  overflow: hidden;
 }
+
+/* Overlay-Effekt über Bild */
+.home::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.3);
+  z-index: 1;
+}
+
+/* Inhalt sichtbar über Overlay */
+.home * {
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------------------------------------- */
+/* --- Einheitliche Unterüberschriften --- */
+/* ---------------------------------------- */
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  font-weight: normal;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+/* ---------------------------------------- */
+/* ---  spezielle Paragraphen --- */
+/* ---------------------------------------- */
+.big-text {
+  font-size: 1.5rem;
+}
+

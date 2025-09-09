@@ -46,14 +46,38 @@
 </head>
 
 
-<main class="content">
-  <section class="clothing-box">
-    <h2>Pullover</h2>
-    <div class="image-row">
-      <img src="images/pullover1.png" alt="Pullover 1">
-      <img src="images/pullover2.png" alt="Pullover 2">
+<section id="chronik">
+      <h2>Chronik</h2>
+
+      <div class="click-section">
+      <button class="click-btn">Unsere Geschichte</button>
+      <p class="click-text">Hallo wir sind Ben und Jakob.</p>
     </div>
-  </section>
+      
+    <div class="click-section">
+      <button class="click-btn">Nachhaltigkeit</button>
+      <p class="click-text">Nachhaltigkeit ist uns wichtig.</p>
+    </div>
+    </section>
 
   <a href="index.html" class="back-link">← Zurück zur Startseite</a>
 </main>
+
+<script>
+  // Alle Buttons mit Klasse .click-btn auswählen
+  const buttons = document.querySelectorAll(".click-btn");
+
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      // Text direkt unter dem Button auswählen
+      const text = button.nextElementSibling;
+      
+      // Toggle: Wenn sichtbar, ausblenden; wenn unsichtbar, anzeigen
+      if (text.style.display === "block") {
+        text.style.display = "none";
+      } else {
+        text.style.display = "block";
+      }
+    });
+  });
+</script>
