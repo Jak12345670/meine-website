@@ -6,7 +6,7 @@ html {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Playfair Display', sans-serif;
   margin: 0;
   padding: 0;
   line-height: 1.6;
@@ -37,13 +37,17 @@ h1#mainTitle {
 nav {
   background-color: white;
   padding: 0;
-  margin: 0;
+  margin: 1rem auto;              /* Abstand nach oben/unten */                   /* wie bei den Boxen */
+  max-width: 1200px;              /* gleiche Breite wie Boxen */
+  border-radius: 8px;             /* abgerundete Ecken */
+  box-shadow: 0 0 5px rgba(0,0,0,0.1); /* dezenter Schatten */
 }
+
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -130,7 +134,7 @@ nav ul li:hover > a {
 section {
   padding: 2rem;
   margin: 1rem auto;
-  max-width: 800px;
+  max-width: 1200px;
   background-color: white;
   border-radius: 8px;
   box-shadow: 0 0 5px rgba(0,0,0,0.1);
@@ -267,4 +271,15 @@ footer {
 
 #mainTitle a:hover {
   color: #333; /* beim Darüberfahren leicht dunkler, kannst du anpassen */
+}
+
+
+/* Hintergrundbild nur für die Startseiten-Box */
+.home {
+  background-image: url('images/benjakob2.jpeg'); /* Pfad zum Bild anpassen */
+  background-size: cover;       /* Bild wird komplett angezeigt */
+  background-position: center;  /* Bild zentriert */
+  border-radius: 12px;          /* gleiche abgerundete Ecken wie andere Boxen */
+  padding: 2rem;                /* optional, Innenabstand */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* optional, Schatten */
 }
