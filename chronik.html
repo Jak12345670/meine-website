@@ -1,22 +1,13 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meine Nützliche Website</title>
-  
-  <!-- Google Font: Playfair Display (künstlerisch, seriös) -->
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
-  
-  <link rel="stylesheet" href="style.css">
-</head>
 
 <header>
   <div class="title-with-ginkgo">
     <img src="ginkgo.png" alt="Ginkgo-Blatt links" class="ginkgo">
-<h1 id="mainTitle">
+   <h1 id="mainTitle">
   <a href="index.html">KNÖBL FÜRUTER</a>
 </h1>
+
     <img src="ginkgo.png" alt="Ginkgo-Blatt rechts" class="ginkgo">
   </div>
 
@@ -32,8 +23,9 @@
       <li class="has-submenu">
         <a href="seifen.html">Seifen</a>
         <ul class="submenu">
-          <li><a href="seifen.html">Seifen</a></li>
-        </ul>
+          <li><a href="naturseifen.html">Naturseifen</a></li>
+          <li><a href="honigseifen.html">Honigseifen</a></li>
+       </ul>
       </li>
       <li><a href="chronik.html">Chronik</a></li>
       <li><a href="kontakt.html">Kontakt</a></li>
@@ -41,16 +33,27 @@
   </nav>
 </header>
 
-<body>
-  <div class="content">
-    <h1>T-Shirts</h1>
-    <p>Hier kommen Bilder von T-Shirts:</p>
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meine Nützliche Website</title>
+  
+  <!-- Google Font: Playfair Display (künstlerisch, seriös) -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+
+
+<main class="content">
+  <section class="clothing-box">
+    <h2>Pullover</h2>
     <div class="image-row">
-      <img src="images/tshirt1.png" alt="T-Shirt 1">
+      <img src="images/pullover1.png" alt="Pullover 1">
+      <img src="images/pullover2.png" alt="Pullover 2">
     </div>
+  </section>
 
-    <br><br>
-    <a href="index.html">← Zurück zur Startseite</a>
-  </div>
-</body>
+  <a href="index.html" class="back-link">← Zurück zur Startseite</a>
+</main>

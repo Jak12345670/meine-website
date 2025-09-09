@@ -1,4 +1,6 @@
+/* ---------------------------------------- */
 /* --- Global --- */
+/* ---------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
@@ -11,7 +13,9 @@ body {
   background-color: #f5f5f5;
 }
 
+/* ---------------------------------------- */
 /* --- Header --- */
+/* ---------------------------------------- */
 header {
   background-color: #f5f5f5;
   color: #556B2F;
@@ -21,13 +25,15 @@ header {
 
 h1#mainTitle {
   font-family: 'Playfair Display', serif;
+  font-weight: 300;
   font-size: 3rem;
   color: #556B2F;
   margin: 0.5rem 0;
 }
 
+/* ---------------------------------------- */
 /* --- Navigation --- */
-/* --- Navigation --- */
+/* ---------------------------------------- */
 nav {
   background-color: white;
   padding: 0;
@@ -55,7 +61,7 @@ nav ul li a {
   color: black;
   padding: 1rem;
   border-radius: 4px;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 /* Hover: Hauptpunkt färbt sich synchron mit Dropdown */
@@ -78,49 +84,6 @@ nav ul li:hover > a {
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   z-index: 1000;
   min-width: 160px;
-
-  opacity: 0;
-  transform: translateY(-10px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-/* Dropdown sichtbar beim Hover über den gesamten <li> */
-.has-submenu:hover .submenu {
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* Unterpunkte */
-.submenu li a {
-  display: block;
-  padding: 0.6rem 1rem;
-  color: #fff; /* Textfarbe Dropdown */
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background 0.3s, color 0.3s;
-}
-
-.submenu li a:hover {
-  background: #f0f0f0;
-  color: #333;
-}
-
-
-/* Dropdown Menü */
-.submenu {
-  visibility: hidden;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: #556B2F;
-  padding: 0.5rem 0;
-  margin: 0;
-  list-style: none;
-  border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  z-index: 1000;
-  min-width: 160px;
   opacity: 0;
   transform: translateY(-10px);
   transition: opacity 0.3s ease, transform 0.3s ease;
@@ -135,17 +98,20 @@ nav ul li:hover > a {
 .submenu li a {
   display: block;
   padding: 0.6rem 1rem;
-  color: #333;
+  color: #fff;
   text-decoration: none;
   white-space: nowrap;
-  transition: background 0.3s, color 0.3s;
+  transition: all 0.3s ease;
 }
 
 .submenu li a:hover {
   background: #f0f0f0;
+  color: #333;
 }
 
+/* ---------------------------------------- */
 /* --- Title + Ginkgo --- */
+/* ---------------------------------------- */
 .title-with-ginkgo {
   display: flex;
   align-items: center;
@@ -158,7 +124,9 @@ nav ul li:hover > a {
   height: auto;
 }
 
+/* ---------------------------------------- */
 /* --- Sections --- */
+/* ---------------------------------------- */
 section {
   padding: 2rem;
   margin: 1rem auto;
@@ -174,7 +142,9 @@ section {
   padding-right: 1rem;
 }
 
+/* ---------------------------------------- */
 /* --- Buttons --- */
+/* ---------------------------------------- */
 .click-section {
   margin-bottom: 1rem;
 }
@@ -189,7 +159,7 @@ section {
   cursor: pointer;
   font-family: 'Playfair Display', serif;
   font-size: 1rem;
-  transition: background 0.3s;
+  transition: all 0.3s ease;
 }
 
 .click-btn:hover {
@@ -201,7 +171,9 @@ section {
   margin-top: 0.5rem;
 }
 
+/* ---------------------------------------- */
 /* --- Bilder nebeneinander --- */
+/* ---------------------------------------- */
 .image-row {
   display: flex;
   gap: 1rem;
@@ -213,14 +185,17 @@ section {
   width: 100%;
   border-radius: 8px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.2);
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
 }
 
 .image-row img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
 }
 
+/* ---------------------------------------- */
 /* --- Kontaktbereich --- */
+/* ---------------------------------------- */
 .contact-info {
   background: #f4f4f4;
   padding: 1rem;
@@ -233,9 +208,63 @@ section {
   font-size: 1rem;
 }
 
+/* ---------------------------------------- */
 /* --- Footer --- */
 footer {
   text-align: center;
   padding: 1rem;
   background-color: #ddd;
+}
+
+/* ---------------------------------------- */
+/* --- Kleidung-Seite --- */
+#kleidung h1,
+#kleidung h2 {
+  color: black;
+  text-align: left;
+}
+
+#kleidung a {
+  display: block;
+  text-align: left;
+  margin-top: 1rem;
+}
+
+.clothing-box {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#kleidung h2 {
+  font-family: 'Playfair Display', serif;
+  color: #000;
+  text-align: left;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #f0f0f0;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #333;
+}
+
+.back-link:hover {
+  background-color: #dcdcdc;
+}
+
+#mainTitle a {
+  color: inherit;         /* übernimmt die gleiche Farbe wie das H1 */
+  text-decoration: none;  /* kein Unterstrich */
+}
+
+#mainTitle a:hover {
+  color: #333; /* beim Darüberfahren leicht dunkler, kannst du anpassen */
 }
