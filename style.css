@@ -38,6 +38,7 @@ h1#mainTitle {
 
 #mainTitle a:hover {
   color: #333; /* beim Hover etwas dunkler */
+  text-decoration: none;
 }
 
 /* ---------------------------------------- */
@@ -326,5 +327,53 @@ h2 {
 /* ---------------------------------------- */
 .big-text {
   font-size: 1.5rem;
+}
+
+/* --- Slider --- */
+.slider {
+  position: relative;
+  max-width: 500px;   /* kannst du anpassen */
+  margin: 2rem auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slides img {
+  display: none;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.slides img.active {
+  display: block;
+}
+
+/* Pfeile */
+.slider button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  opacity: 0;             /* unsichtbar, bis Hover */
+  transition: opacity 0.3s ease;
+}
+
+.slider:hover button {
+  opacity: 1;             /* Pfeile erscheinen beim Hover */
+}
+
+.slider button.prev {
+  left: 10px;
+}
+
+.slider button.next {
+  right: 10px;
 }
 

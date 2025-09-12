@@ -32,8 +32,7 @@
   </nav>
 </header>
 
-
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Meine Nützliche Website</title>
@@ -44,31 +43,31 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
+  <main>
+    <section class="content">
+    <div class="slider">
+  <div class="slides">
+    <img src="images/pullover1.png" alt="Pullover Ansicht 1" class="active">
+    <img src="images/pullover1b.jpg" alt="Pullover Ansicht 2">
+    <img src="images/pullover1c.jpg" alt="Pullover Ansicht 3">
+    <img src="images/pullover1d.jpg" alt="Pullover Ansicht 4">
+  </div>
+  <button class="prev">&#10094;</button>
+  <button class="next">&#10095;</button>
+</div>
+</section>
 
-<main class="content">
-  <section class="clothing-box">
-    <h2>Pullover</h2>
-    <div class="image-row">
-      <a href="pullover1.html">
-      <img src="images/pullover1.png" alt="Pullover 1">
-      </a>
-      <a href="pullover2.html">
-      <img src="images/pullover2.png" alt="Pullover 2">
-      </a>
-    </div>
-  </section>
+      <a href="kleidung.html" class="back-link">← Zurück zu Kleidung</a>
+    </section>
+  </main>
 
-  <a href="index.html" class="back-link">← Zurück zur Startseite</a>
-</main>
+  <body>
+  <footer>
+    <p>&copy; 2025 KNÖBL FÜRUTER</p>
+  </footer>
+</body>
 
 <body>
-  <div id="footer-placeholder"></div>
-<script>
-  fetch("footer.html")
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById("footer-placeholder").innerHTML = data;
-    });
-</script>
-
+  <script src="script.js"></script>
 </body>
+</html>

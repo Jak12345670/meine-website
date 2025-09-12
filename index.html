@@ -76,11 +76,6 @@
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Meine Website</p>
-  </footer>
-
-
   <script>
   // Alle Buttons mit Klasse .click-btn auswählen
   const buttons = document.querySelectorAll(".click-btn");
@@ -98,6 +93,23 @@
       }
     });
   });
+</script>
+
+<body>
+  <div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
+</script><div id="footer-placeholder"></div>
+<script>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById("footer-placeholder").innerHTML = data;
+    });
 </script>
 
 </body>
