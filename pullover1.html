@@ -43,22 +43,60 @@
   <link rel="stylesheet" href="style.css">
 </head>
 
-  <main>
-    <section class="content">
-    <div class="slider">
-  <div class="slides">
-    <img src="images/pullover1.png" alt="Pullover Ansicht 1" class="active">
-    <img src="images/pullover1b.jpg" alt="Pullover Ansicht 2">
-    <img src="images/pullover1c.jpg" alt="Pullover Ansicht 3">
-    <img src="images/pullover1d.jpg" alt="Pullover Ansicht 4">
-  </div>
-  <button class="prev">&#10094;</button>
-  <button class="next">&#10095;</button>
-</div>
-</section>
+<main>
+  <div class="pullover-box">
+    <div class="pullover-container">
+  <!-- Haupt-Slider (links) -->
+  <div class="pullover-slider slider">
+    <div class="slides">
+      <img src="images/pulli1.HEIC" alt="Pullover Ansicht 1" class="active">
+      <img src="images/pulli2.HEIC" alt="Pullover Ansicht 2">
+      <img src="images/pulli3.HEIC" alt="Pullover Ansicht 3">
+      <img src="images/pulli4.HEIC" alt="Pullover Ansicht 4">
+    </div>
 
-      <a href="kleidung.html" class="back-link">← Zurück zu Kleidung</a>
-    </section>
+    <button class="slider-arrow prev" aria-label="Vorheriges Bild">&#10094;</button>
+    <button class="slider-arrow next" aria-label="Nächstes Bild">&#10095;</button>
+  </div>
+
+  <!-- Rechts daneben: Thumbnails + Info-Buttons (in einer gemeinsamen Spalte) -->
+  <div class="pullover-side">
+    <!-- Vorschaubilder (linke Spalte der Side) -->
+    <div class="pullover-thumbs">
+      <img src="images/pulli1.HEIC" alt="Thumbnail 1" data-index="0" class="active">
+      <img src="images/pulli2.HEIC" alt="Thumbnail 2" data-index="1">
+      <img src="images/pulli3.HEIC" alt="Thumbnail 3" data-index="2">
+      <img src="images/pulli4.HEIC" alt="Thumbnail 4" data-index="3">
+    </div>
+
+    <!-- Buttons + zugehörige Texte (rechte Spalte der Side) -->
+    <div class="pullover-info">
+  <div class="button-block">
+    <button>Material</button>
+    <div class="pullover-text">100% Baumwolle, hochwertig verarbeitet.</div>
+  </div>
+
+  <div class="button-block">
+    <button>Pflegehinweise</button>
+    <div class="pullover-text">Bei 30°C waschen, nicht trocknergeeignet.</div>
+  </div>
+
+  <div class="button-block">
+    <button>Preis</button>
+    <div class="pullover-text">Preis: 79,90 €</div>
+  </div>
+
+  <div class="button-block">
+    <button>Lieferung</button>
+    <div class="pullover-text">Lieferzeit 3–5 Werktage.</div>
+  </div>
+</div>
+  </div>
+    </div>
+  </div>
+
+<div>
+      </div>
   </main>
 
   <body>

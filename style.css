@@ -377,3 +377,290 @@ h2 {
   right: 10px;
 }
 
+.pullover-slider {
+  max-width: 400px;   /* Breite begrenzen, kannst du anpassen */
+  margin-left: 1rem;     /* linksbündig */
+}
+
+/* Container: Hauptbild + Thumbnails nebeneinander */
+.pullover-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;         /* Abstand zwischen großem Bild und Vorschaubildern */
+  margin-left: 1rem; /* Abstand zum linken Rand */
+  width: fit-content;
+}
+
+/* Slider groß */
+.pullover-slider {
+  max-width: 500px;
+  position: relative; /* nötig, damit die Pfeile absolut innerhalb des Sliders liegen */
+  margin: 0;
+  padding: 0;
+}
+
+/* Bilder im Slider */
+.slides img {
+  display: none;
+  width: 100%;
+  border-radius: 8px;
+  vertical-align: top;
+}
+.slides img.active {
+  display: block;
+}
+
+/* Vorschaubilder rechts */
+.pullover-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.pullover-thumbs img {
+  width: 80px;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+}
+
+.pullover-thumbs img:hover,
+.pullover-thumbs img.active {
+  opacity: 1;
+  border: 2px solid #556B2F; /* grünlicher Rahmen bei Auswahl */
+}
+
+/* Pfeile für den Slider */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;      /* Kein Hintergrund */
+  color: #000;                  /* Schwarz */
+  font-size: 2rem;              /* Größe Pfeil */
+  font-weight: 300;             /* dünn */
+  border: none;                 /* kein Rahmen */
+  cursor: pointer;
+  opacity: 0;                   /* standardmäßig unsichtbar */
+  transition: opacity 0.3s ease;
+  padding: 0 0.3rem;            /* etwas Abstand links/rechts */
+  z-index: 10;                  /* über dem Bild */
+}
+
+/* Pfeile sichtbar beim Hover */
+.slider:hover .slider-arrow {
+  opacity: 1;
+}
+
+/* Position links/rechts */
+.slider-arrow.prev {
+  left: 5px;                    /* Abstand zum linken Rand */
+}
+
+.slider-arrow.next {
+  right: 5px;                   /* Abstand zum rechten Rand */
+}
+
+/* Optional: beim Hover über Pfeil selbst leichte Vergrößerung */
+.slider-arrow:hover {
+  transform: translateY(-50%) scale(1.2);
+}
+
+/* Box für den Pullover-Slider (wie Kleidung-Box) */
+.pullover-box {
+  background: #fff;              /* weißer Hintergrund */
+  border-radius: 12px;           /* abgerundete Ecken */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1); /* weicher Schatten */
+  padding: 1.5rem;               /* Innenabstand */
+  width: calc(100%-2rem);            /* passt sich dem Inhalt an */
+  margin: 0 1rem;
+}
+
+/* Container bleibt flexibel */
+.pullover-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem; /* Abstand zwischen den Spalten */
+}
+/* Info-Spalte mit Buttons */
+.pullover-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* Buttons edel/minimalistisch */
+.pullover-info button {
+  background: none;
+  border: 1px solid #000;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+}
+
+.pullover-info button:hover {
+  background: #000;
+  color: #fff;
+}
+
+/* Texte unterhalb der Buttons, aber standardmäßig versteckt */
+.pullover-text {
+  display: none;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* Wenn aktiv */
+.pullover-text.active {
+  display: block;
+}
+
+
+
+
+
+
+
+
+
+/* ---- Layout: Slider links, Thumbs + Buttons rechts ---- */
+.pullover-container {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  width: calc(100%-2rem);
+}
+
+/* Side: Thumbs (links) + Info (rechts) nebeneinander */
+.pullover-side {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+/* Thumbnails (linke Spalte) */
+.pullover-thumbs {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin: 0;
+}
+.pullover-thumbs img {
+  width: 80px;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  cursor: pointer;
+  opacity: 0.75;
+  transition: transform .18s ease, opacity .18s ease, border .18s ease;
+}
+.pullover-thumbs img:hover,
+.pullover-thumbs img.active {
+  opacity: 1;
+  transform: translateY(-2px);
+  border: 2px solid #556B2F;
+}
+
+/* Info-Spalte (rechte Spalte) */
+.pullover-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  min-width: 160px;
+  margin: 0;
+}
+
+/* Buttons (elegant/minimal) */
+.pullover-info button {
+  background: none;
+  border: 1px solid #222;
+  padding: 0.45rem 0.8rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background .18s ease, color .18s ease, transform .12s ease;
+}
+.pullover-info button:hover {
+  background: #222;
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+/* Textbereiche unter Buttons (initial versteckt) */
+.pullover-text {
+  display: none;
+  margin-top: 0.35rem;
+  font-size: 0.95rem;
+  line-height: 1.4;
+  color: #222;
+}
+.pullover-text.active {
+  display: block;
+}
+
+/* slider basics (falls du noch nicht hast) */
+.pullover-slider { max-width: 500px; position: relative; margin: 0; padding: 0; }
+.slides img { display: none; width: 100%; border-radius: 8px; vertical-align: top; }
+.slides img.active { display: block; }
+
+/* Pfeile (minimalistisch, nur beim hover des sliders sichtbar) */
+.slider-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  color: #000;
+  font-size: 1.9rem;
+  font-weight: 300;
+  border: none;
+  padding: 0 0.3rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity .22s ease, transform .12s ease;
+  z-index: 10;
+}
+.pullover-slider:hover .slider-arrow { opacity: 0.85; }
+.slider-arrow.prev { left: 6px; }
+.slider-arrow.next { right: 6px; }
+.slider-arrow:hover { transform: translateY(-50%) scale(1.08); }
+
+
+/* Jeder Button + Text in einer Spalte */
+.button-block {
+  font-family: arial;
+  display: flex;
+  flex-direction: column;   /* Button oben, Text darunter */
+  align-items: center;      /* Optional: zentriert */
+  width: 170px;             /* feste Button-Breite, passt Text darunter */
+  margin-bottom: 1rem;
+}
+
+/* Button festlegen, Größe bleibt gleich */
+.button-block button {
+  width: 100%;             /* passt zur Breite von .button-block */
+  height: 40px;            /* feste Höhe, egal wie lang der Text ist */
+  white-space: nowrap;     /* verhindert Umbruch innerhalb des Buttons */
+}
+
+/* Text direkt unter Button */
+.button-block .pullover-text {
+  margin-top: 0.5rem;      /* Abstand zum Button */
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.pullover-text {
+  font-family: inherit;
+  display: none;          /* erst unsichtbar */
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+/* Optional: schönerer Effekt beim Einblenden */
+.pullover-text.show {
+  display: block;
+}
