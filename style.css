@@ -547,7 +547,7 @@ h2 {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
-  margin: 0;
+  margin-left: 1rem;
 }
 .pullover-thumbs img {
   width: 80px;
@@ -636,6 +636,7 @@ h2 {
   align-items: center;      /* Optional: zentriert */
   width: 170px;             /* feste Button-Breite, passt Text darunter */
   margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 /* Button festlegen, Größe bleibt gleich */
@@ -663,4 +664,54 @@ h2 {
 /* Optional: schönerer Effekt beim Einblenden */
 .pullover-text.show {
   display: block;
+}
+
+.image-row {
+  display: flex;
+  gap: 2rem;             /* Abstand zwischen den Items */
+  justify-content: flex-start; /* statt center → links ausrichten */
+}
+
+
+.clothing-item {
+  text-align: center;    /* Bild + Text zentrieren */
+  max-width: 250px;      /* gleiche Breite für alle */
+  flex: 1;
+}
+
+.clothing-item img {
+  max-width: 100%;
+  border-radius: 6px;
+}
+
+.clothing-item p {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+.pullover-description {
+  font-size: 2rem;
+  margin-top: 1rem;
+  font-family: 'Playfair Display', serif; /* gleiche Schrift wie Buttons */
+  color: #333;
+  margin-bottom: 1rem; /* Abstand zu den Buttons */
+}
+
+.pullover-info-title {
+  font-size: 2rem;
+  font-weight: normal;
+  margin: 0 0 1rem 0; /* kein Abstand nach oben, nur nach unten */
+  font-family: 'Playfair Display', serif;
+  color: #333;
+}
+
+.pullover-info-header {
+  font-size: 2rem;
+  font-weight: normal;
+margin-bottom: 1rem; 
+margin-top: -1rem;
+margin-left: 1rem;
+ font-family: 'Playfair Display', serif;
+  color: #333;
 }
